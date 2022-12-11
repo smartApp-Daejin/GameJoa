@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".board.BoardWriteActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/TextStyle"
+                android:text="@string/write_page"/>
+        </LinearLayout>
+
+        <View style="@style/BoardDivider" />
+
+        <EditText
+            android:id="@+id/titleArea"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/write_title"
+            style="@style/BoardEditText"/>
+
+        <View style="@style/Divider"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <EditText
+            android:id="@+id/contentArea"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/write_content"
+            style="@style/BoardEditText"/>
+
+        <View style="@style/Divider"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageView
+            android:id="@+id/imageArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/plus_btn"/>
+
+        <Button
+            android:id="@+id/writeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/write_btn"
+            style="@style/WriteSuccessButton"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".board.BoardEditActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/write_modify" />
+        </LinearLayout>
+
+        <View style="@style/BoardDivider" />
+        <TextView
+            android:id="@+id/timeArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_margin="5dp"
+            tools:text="Time" />
+
+        <EditText
+            android:id="@+id/titleArea"
+            style="@style/BoardEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/write_title" />
+
+        <View
+            style="@style/Divider"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp" />
+
+        <EditText
+            android:id="@+id/contentArea"
+            style="@style/BoardEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/write_content" />
+
+        <View
+            style="@style/Divider"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp" />
+
+        <ImageView
+            android:id="@+id/imageArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/plus_btn" />
+
+        <Button
+            android:id="@+id/editBtn"
+            style="@style/WriteSuccessButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_modify" />
+    </LinearLayout>
+</layout>
