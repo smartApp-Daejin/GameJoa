@@ -45,18 +45,6 @@ class BoardInsideActivity : AppCompatActivity() {
 
         }
 
-        // 방법 1. listView 에 있는 데이터 title, content, time 을 다 다른 액티비티로 전달해줘서 만들기
-        /*
-        // 방법 1-2 보내준 데이터를 받음
-        val title = intent.getStringExtra("title").toString()
-        val content = intent.getStringExtra("content").toString()
-        val time = intent.getStringExtra("time").toString()
-
-        // 방법 1-3 받을 데이터를 해당 요소에 할당
-        binding.titleArea.text = title
-        binding.contentArea.text = content
-        binding.timeArea.text = time
-         */
 
         // 방법 2-4 보내준 데이터를 받음
         key = intent.getStringExtra("key").toString()

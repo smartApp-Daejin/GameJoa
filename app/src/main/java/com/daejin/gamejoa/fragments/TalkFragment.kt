@@ -13,7 +13,6 @@ import com.daejin.gamejoa.R
 import com.daejin.gamejoa.adapter.BoardListLVAdapter
 import com.daejin.gamejoa.board.BoardInsideActivity
 import com.daejin.gamejoa.board.BoardWriteActivity
-import com.daejin.gamejoa.contentsList.ContentModel
 import com.daejin.gamejoa.databinding.FragmentTalkBinding
 import com.daejin.gamejoa.model.BoardModel
 import com.daejin.gamejoa.util.FBRef
@@ -39,9 +38,6 @@ class TalkFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_talk, container, false)
 
         onClick(binding.homeTap)
-        onClick(binding.tipTap)
-        onClick(binding.bookmarkTap)
-        onClick(binding.storeTap)
         onClick(binding.writeBtn)
 
         boardRVAdapter = BoardListLVAdapter(boardDataList) // 어댑터 정의
@@ -50,15 +46,6 @@ class TalkFragment : Fragment() {
         // 게시글 클릭 시 BoardModel(title, content, time)을 다른 액티비티로 보내는 방법
         binding.boardListView.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(requireContext(), BoardInsideActivity::class.java)
-
-            // 방법 1. listView 에 있는 데이터 title, content, time 을 다 다른 액티비티로 전달해줘서 만들기
-            /*
-            // 방법 1-1 intent 로 boardDataList 에 있는 항목들을 한개씩 넘겨줌
-            intent.putExtra("title",boardDataList[position].title) 
-            intent.putExtra("content",boardDataList[position].content)
-            intent.putExtra("time",boardDataList[position].time)
-            */
-
             // 방법 2. 파이어베이스에 있는 board(field)에 대한 데이터의 id를 기반으로 다시 데이터를 받아오는 방법
             intent.putExtra("key",boardKeyList[position]) // 방법 2-3 intent 로 boardKeyList 를 보내줌
             startActivity(intent)
@@ -75,9 +62,6 @@ class TalkFragment : Fragment() {
     private fun onClick(v: View) {
         when(v.id) {
             R.id.homeTap -> binding.homeTap.setOnClickListener { it.findNavController().navigate(R.id.action_talkFragment_to_homeFragment) }
-            R.id.tipTap-> binding.tipTap.setOnClickListener{ it.findNavController().navigate(R.id.action_talkFragment_to_tipFragment) }
-            R.id.bookmarkTap -> binding.bookmarkTap.setOnClickListener { it.findNavController().navigate(R.id.action_talkFragment_to_bookmarkFragment) }
-            R.id.storeTap -> binding.storeTap.setOnClickListener { it.findNavController().navigate(R.id.action_talkFragment_to_storeFragment) }
             R.id.writeBtn -> binding.writeBtn.setOnClickListener { startActivity(Intent(requireContext(), BoardWriteActivity::class.java)) }
         }
     }

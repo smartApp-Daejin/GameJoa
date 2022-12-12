@@ -72,38 +72,17 @@
 
             <ImageView
                 android:id="@+id/homeTap"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/bottom_hometap" />
 
             <ImageView
-                android:id="@+id/tipTap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/bottom_goodtip" />
-
-            <ImageView
                 android:id="@+id/talkTap"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/bottom_talk" />
-
-            <ImageView
-                android:id="@+id/bookmarkTap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/bottom_bookmark" />
-
-            <ImageView
-                android:id="@+id/storeTap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/bottom_store" />
 
         </LinearLayout>
 

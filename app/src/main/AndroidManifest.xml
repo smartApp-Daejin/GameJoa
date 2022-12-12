@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SoloLifeApp"
+        android:theme="@style/Theme.GameJoaApp"
         tools:targetApi="31">
         <activity
             android:name=".setting.SettingActivity"
@@ -27,12 +27,6 @@
             android:exported="false" />
         <activity
             android:name=".board.BoardWriteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".contentsList.ContentShowActivity"
-            android:exported="false" />
-        <activity
-            android:name=".contentsList.ContentListActivity"
             android:exported="false" />
         <activity
             android:name=".auth.JoinActivity"
