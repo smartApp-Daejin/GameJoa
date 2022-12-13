@@ -1,6 +1,6 @@
 package com.daejin.gamejoa.comment
 
 data class CommentModel(
-    val commentTitle : String = "",
+    val commentContent : String = "",
     val commentCreatedTime : String = ""
-)
+    )

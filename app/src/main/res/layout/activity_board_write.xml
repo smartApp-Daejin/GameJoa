@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -9,53 +9,80 @@
         android:orientation="vertical"
         tools:context=".board.BoardWriteActivity">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="60dp">
-            <TextView
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                style="@style/TextStyle"
-                android:text="@string/write_page"/>
-        </LinearLayout>
+                android:layout_height="match_parent">
 
-        <View style="@style/BoardDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
 
-        <EditText
-            android:id="@+id/titleArea"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="@string/write_title"
-            style="@style/BoardEditText"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="글쓰기 페이지"
+                    android:textColor="@color/black" />
 
-        <View style="@style/Divider"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/contentArea"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="@string/write_content"
-            style="@style/BoardEditText"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#000000" />
 
-        <View style="@style/Divider"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            <EditText
+                android:id="@+id/titleArea"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:hint="제목을 입력해주세요" />
 
-        <ImageView
-            android:id="@+id/imageArea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/plus_btn"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#000000" />
 
-        <Button
-            android:id="@+id/writeBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/write_btn"
-            style="@style/WriteSuccessButton"/>
+            <EditText
+                android:id="@+id/contentArea"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:hint="내용을 입력해주세요" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#000000" />
+
+            <ImageView
+                android:id="@+id/imageArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/plusbtn" />
+
+            <Button
+                android:id="@+id/writebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_radius_yellow"
+                android:text="입력" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </layout>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".auth.IntroActivity">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,9 +22,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="360dp"
-                android:src="@drawable/upperbg"
+                android:layout_alignParentBottom="true"
                 android:scaleType="fitXY"
-                android:layout_alignParentBottom="true" />
+                android:src="@drawable/upperbg" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,22 +37,31 @@
                     android:id="@+id/loginBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    style="@style/ButtonStyle"
-                    android:text="@string/login_name"/>
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_radius"
+                    android:text="로그인"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/joinBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    style="@style/ButtonStyle"
-                    android:text="@string/sign_name"/>
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_radius"
+                    android:text="회원가입"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/noAccountBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    style="@style/ButtonStyle"
-                    android:text="@string/no_sign_name"/>
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_radius"
+                    android:text="비회원가입"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </RelativeLayout>

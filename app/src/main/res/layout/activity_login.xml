@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -9,83 +9,64 @@
         android:orientation="vertical"
         tools:context=".auth.LoginActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginBottom="50dp"
-            android:background="@color/main_color">
+            android:layout_height="200dp"
+            android:background="@color/mainColor">
 
-            <ImageView
-                android:id="@+id/backBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_back"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/logo"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/login_name"
-                    style="@style/AuthTextView"/>
-
-
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="로그인"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/emailArea"
+                style="@style/AuthEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="@string/email_hint"
-                android:inputType="textEmailAddress"
-                style="@style/AuthEditText"/>
+                android:hint="email" />
 
-            <View style="@style/Divider"/>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#999999" />
 
             <EditText
                 android:id="@+id/passwordArea"
+                style="@style/AuthEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="@string/pwd_hint"
-                android:inputType="textPassword"
-                style="@style/AuthEditText"/>
+                android:hint="password"
+                android:inputType="textPassword" />
 
-            <View style="@style/Divider"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#999999" />
 
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="@string/start_login"
-                style="@style/ButtonRadius"/>
-
-
+                android:layout_margin="20dp"
+                android:background="@drawable/background_radius_yellow"
+                android:text="로그인" />
 
         </LinearLayout>
-
     </LinearLayout>
 </layout>

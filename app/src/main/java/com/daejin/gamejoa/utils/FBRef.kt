@@ -1,18 +1,17 @@
-package com.daejin.gamejoa.util
+package com.daejin.gamejoa.utils
 
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class FBRef {
-
     companion object {
         private val database = Firebase.database
+        val category1 = database.getReference("contents")
+        val category2 = database.getReference("contents2")
 
-        // 게시판 데이터베이스 필드
+        val bookmarkRef = database.getReference("bookmark_list")
         val boardRef = database.getReference("board")
-
-        // 댓글 데이터베이스 필드
         val commentRef = database.getReference("comment")
-
     }
 }
