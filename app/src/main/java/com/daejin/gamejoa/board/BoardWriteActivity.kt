@@ -12,7 +12,6 @@ import androidx.databinding.DataBindingUtil
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import com.daejin.gamejoa.R
-import com.daejin.gamejoa.contensList.BookmarkModel
 import com.daejin.gamejoa.databinding.ActivityBoardWriteBinding
 import com.daejin.gamejoa.utils.FBAuth
 import com.daejin.gamejoa.utils.FBRef

@@ -17,7 +17,6 @@ import com.daejin.gamejoa.board.BoardInsideActivity
 import com.daejin.gamejoa.board.BoardListViewAdapter
 import com.daejin.gamejoa.board.BoardModel
 import com.daejin.gamejoa.board.BoardWriteActivity
-import com.daejin.gamejoa.contensList.BookmarkRVAdapter
 import com.daejin.gamejoa.contensList.ContentModel
 import com.daejin.gamejoa.databinding.FragmentTalkBinding
 import com.daejin.gamejoa.utils.FBRef
@@ -63,22 +62,6 @@ class TalkFragment : Fragment() {
         binding.writeBtn.setOnClickListener {
             val intent = Intent(context, BoardWriteActivity::class.java)
             startActivity(intent)
-        }
-
-        binding.homeTab.setOnClickListener {
-            it.findNavController().navigate(R.id.action_talkFragment_to_homeFragment)
-        }
-
-        binding.tipTab.setOnClickListener {
-            it.findNavController().navigate(R.id.action_talkFragment_to_tipFragment)
-        }
-
-        binding.bookmarkTab.setOnClickListener {
-            it.findNavController().navigate(R.id.action_talkFragment_to_bookmarkFragment)
-        }
-
-        binding.storeTab.setOnClickListener {
-            it.findNavController().navigate(R.id.action_talkFragment_to_storeFragment)
         }
 
         getFBBoardData()
