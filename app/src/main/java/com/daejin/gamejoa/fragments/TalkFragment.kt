@@ -17,7 +17,6 @@ import com.daejin.gamejoa.board.BoardInsideActivity
 import com.daejin.gamejoa.board.BoardListViewAdapter
 import com.daejin.gamejoa.board.BoardModel
 import com.daejin.gamejoa.board.BoardWriteActivity
-import com.daejin.gamejoa.contensList.ContentModel
 import com.daejin.gamejoa.databinding.FragmentTalkBinding
 import com.daejin.gamejoa.utils.FBRef
 
