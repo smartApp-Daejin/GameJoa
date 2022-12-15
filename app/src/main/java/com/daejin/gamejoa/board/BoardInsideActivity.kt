@@ -40,16 +40,6 @@ class BoardInsideActivity : AppCompatActivity() {
             showDialog()
         }
 
-        // 방법 1.
-//        val title = intent.getStringExtra("title").toString()
-//        val content = intent.getStringExtra("content").toString()
-//        val time = intent.getStringExtra("time").toString()
-//
-//        binding.titleArea.text = title
-//        binding.contentArea.text = content
-//        binding.timeArea.text = time
-
-        // 방법 2.
         key = intent.getStringExtra("key").toString()
 
         commentAdapter = CommentListViewAdapter(commentDataList)

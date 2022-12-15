@@ -3,24 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/tipFragment">
+    app:startDestination="@id/talkFragment">
 
     <fragment
         android:id="@+id/talkFragment"
         android:name="com.daejin.gamejoa.fragments.TalkFragment"
         android:label="fragment_talk"
         tools:layout="@layout/fragment_talk" >
-        <action
-            android:id="@+id/action_talkFragment_to_tipFragment"
-            app:destination="@id/tipFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/tipFragment"
-        android:name="com.daejin.gamejoa.fragments.TipFragment"
-        android:label="fragment_tip"
-        tools:layout="@layout/fragment_tip" >
-        <action
-            android:id="@+id/action_tipFragment_to_talkFragment"
-            app:destination="@id/talkFragment" />
     </fragment>
 </navigation>
